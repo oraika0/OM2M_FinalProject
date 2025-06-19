@@ -1,0 +1,2753 @@
+[
+    {
+        "id": "43ecb01d9ef6ca01",
+        "type": "tab",
+        "label": "Lab4 flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6cbf91c606e688cd",
+        "type": "Application",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "pointOfAccess": "",
+        "obixAnnounce": false,
+        "width": 0,
+        "options": [
+            {
+                "label": "SMART_ROOM",
+                "value": "1"
+            }
+        ],
+        "cntInstance": "",
+        "x": 410,
+        "y": 20,
+        "wires": [
+            [
+                "97425bea2f9518e1"
+            ]
+        ]
+    },
+    {
+        "id": "97425bea2f9518e1",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "f4136dfb1a1a4dda",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 20,
+        "wires": [
+            [
+                "6cbf91c606e688cd"
+            ]
+        ]
+    },
+    {
+        "id": "50bd1f6732886eca",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "2cb0826946e33b4d"
+            ]
+        ]
+    },
+    {
+        "id": "5fa8dbf7cee5ca2c",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2cb0826946e33b4d",
+        "type": "Container",
+        "z": "43ecb01d9ef6ca01",
+        "name": "USER_TARGET_Container",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "viewtype": "autre",
+        "viewunid1": "USER_TARGET",
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "5fa8dbf7cee5ca2c"
+            ]
+        ]
+    },
+    {
+        "id": "ef76ab098b84a9cc",
+        "type": "ContentInstance",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "container": "AC",
+        "width": 0,
+        "options": [
+            {
+                "type": "str",
+                "label": "power",
+                "value": "ON"
+            },
+            {
+                "type": "str",
+                "label": "AC",
+                "value": "20"
+            }
+        ],
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "970df4a646d0c3cf"
+            ]
+        ]
+    },
+    {
+        "id": "8b6556234b9cb1f8",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "ef76ab098b84a9cc"
+            ]
+        ]
+    },
+    {
+        "id": "970df4a646d0c3cf",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0908dfe8d689891a",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "fc4da00cbc79d316"
+            ]
+        ]
+    },
+    {
+        "id": "fc4da00cbc79d316",
+        "type": "Subscription",
+        "z": "43ecb01d9ef6ca01",
+        "name": "SUB_USER_TARGET",
+        "platform": "ae1f9451e7ecdcc0",
+        "sensor": "b7d3c130e5b79fe5",
+        "container": "USER_TARGET",
+        "path": "http://localhost:1880/NOTIFY_USER_TARGET",
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "4cd02430f1a5cb89"
+            ]
+        ]
+    },
+    {
+        "id": "4cd02430f1a5cb89",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f8f8ebc2bbf7b4c1",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/NOTIFY_TEMP_SENSOR",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 820,
+        "wires": [
+            [
+                "67d20727cd6eb03a"
+            ]
+        ]
+    },
+    {
+        "id": "de6e16a6a7c8edb1",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/USER_TARGET_DATA",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 1520,
+        "wires": [
+            [
+                "5eafe661e60f8c05",
+                "1746cd48a05aa66a"
+            ]
+        ]
+    },
+    {
+        "id": "5eafe661e60f8c05",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;target_temp&quot; val=&quot;'+ msg.payload.target_temp + '&quot;/&gt;\\\n\t\t&lt;str name=&quot;mode&quot; val=&quot;'+ msg.payload.mode + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1520,
+        "wires": [
+            [
+                "74c41c8e41286f58"
+            ]
+        ]
+    },
+    {
+        "id": "74c41c8e41286f58",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to In-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/USER_TARGET",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 740,
+        "y": 1520,
+        "wires": [
+            [
+                "c703d89ababcabb4",
+                "a0927b13cb46bd6c"
+            ]
+        ]
+    },
+    {
+        "id": "c703d89ababcabb4",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "a0927b13cb46bd6c",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "1746cd48a05aa66a",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "94b0208e325ef25f",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/GET_AC_DATA",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 1900,
+        "wires": [
+            [
+                "2616654cd8411a7f"
+            ]
+        ]
+    },
+    {
+        "id": "2616654cd8411a7f",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get from in-cse",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/AC/la",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 480,
+        "y": 1900,
+        "wires": [
+            [
+                "05c60c78c7db88d2"
+            ]
+        ]
+    },
+    {
+        "id": "05c60c78c7db88d2",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 650,
+        "y": 1900,
+        "wires": [
+            [
+                "7b6430f7c3a88921"
+            ]
+        ]
+    },
+    {
+        "id": "7b6430f7c3a88921",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "parse contentInstant content",
+        "func": "msg.payload = msg.payload[\"m2m:cin\"].con[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 1900,
+        "wires": [
+            [
+                "cecc651d08ae2045"
+            ]
+        ]
+    },
+    {
+        "id": "cecc651d08ae2045",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1070,
+        "y": 1900,
+        "wires": [
+            [
+                "de729eed3cdaf6f0"
+            ]
+        ]
+    },
+    {
+        "id": "de729eed3cdaf6f0",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "outp format",
+        "func": "msg.payload = \"{power:\" + msg.payload.obj.str[0].$.val + \",AC:\" + msg.payload.obj.str[1].$.val+\"}\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 1900,
+        "wires": [
+            [
+                "cfc19e9973ed3625"
+            ]
+        ]
+    },
+    {
+        "id": "cfc19e9973ed3625",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1390,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "14effe7e56ec8761",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 1980,
+        "wires": [
+            [
+                "2616654cd8411a7f"
+            ]
+        ]
+    },
+    {
+        "id": "072f80a847b57935",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "9dc7a4dcc1f51fe3",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/LOCATION_GATEWAY_APPLICATION",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 2500,
+        "wires": [
+            [
+                "072f80a847b57935",
+                "ce78b06d6c3feb2f"
+            ]
+        ]
+    },
+    {
+        "id": "3f4638ee29c8e7f3",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1770,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "ce78b06d6c3feb2f",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 630,
+        "y": 2500,
+        "wires": [
+            [
+                "20f21448f344fa7b",
+                "9c195dbda8e36e63"
+            ]
+        ]
+    },
+    {
+        "id": "20f21448f344fa7b",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "9c195dbda8e36e63",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get status",
+        "func": "var data = msg.payload[\"m2m:sgn\"].nev[0].rep[0][\"m2m:cin\"][0].con[0];\nmsg.payload = data\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 2500,
+        "wires": [
+            [
+                "fa154a022c8c60b2",
+                "9c5507752f4548ed"
+            ]
+        ]
+    },
+    {
+        "id": "9c5507752f4548ed",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "fa154a022c8c60b2",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 950,
+        "y": 2500,
+        "wires": [
+            [
+                "d22b919130d0535f",
+                "52457b6b32adf887"
+            ]
+        ]
+    },
+    {
+        "id": "d22b919130d0535f",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "52457b6b32adf887",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "setup object",
+        "func": "var New = { latitude: null, longitude: null };\nNew.latitude = msg.payload.obj.str[0].$.val;\nNew.longitude = msg.payload.obj.str[1].$.val;\nmsg.payload = New;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 2500,
+        "wires": [
+            [
+                "a72ece8dff0924dc"
+            ]
+        ]
+    },
+    {
+        "id": "c09144af15677e40",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to in-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/LOCATION_GATEWAY_APPLICATION/DATA",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1570,
+        "y": 2500,
+        "wires": [
+            [
+                "3f4638ee29c8e7f3",
+                "a63c5d29cc58049b"
+            ]
+        ]
+    },
+    {
+        "id": "a63c5d29cc58049b",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "a72ece8dff0924dc",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;latitude&quot; val=&quot;'+ msg.payload.latitude + '&quot;/&gt;\\\n\t\t&lt;str name=&quot;longitude&quot; val=&quot;'+ msg.payload.longitude + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 2500,
+        "wires": [
+            [
+                "c09144af15677e40"
+            ]
+        ]
+    },
+    {
+        "id": "0e34ab2e87a8fdd9",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "af1bf1d27610a672"
+            ]
+        ]
+    },
+    {
+        "id": "cb1e626f06f9e093",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "af1bf1d27610a672",
+        "type": "Container",
+        "z": "43ecb01d9ef6ca01",
+        "name": "HEADCOUNT_SENSOR_Container",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "viewtype": "autre",
+        "viewunid1": "HEADCOUNT_SENSOR",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "cb1e626f06f9e093"
+            ]
+        ]
+    },
+    {
+        "id": "2191070a882baf75",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "3e06399df76b8eb5"
+            ]
+        ]
+    },
+    {
+        "id": "b5f7084393c24f43",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3e06399df76b8eb5",
+        "type": "Container",
+        "z": "43ecb01d9ef6ca01",
+        "name": "TEMP_SENSOR_Container",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "viewtype": "autre",
+        "viewunid1": "TEMP_SENSOR",
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "b5f7084393c24f43"
+            ]
+        ]
+    },
+    {
+        "id": "bd8cdcecdb9e6737",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "999c57f35aabce1a"
+            ]
+        ]
+    },
+    {
+        "id": "e4f3d4a9c1768778",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "999c57f35aabce1a",
+        "type": "Container",
+        "z": "43ecb01d9ef6ca01",
+        "name": "AC_Container",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "viewtype": "autre",
+        "viewunid1": "AC",
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "e4f3d4a9c1768778"
+            ]
+        ]
+    },
+    {
+        "id": "a6ce600826e811b7",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "f415aaa3f841165b"
+            ]
+        ]
+    },
+    {
+        "id": "0ae040212fe590b5",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f415aaa3f841165b",
+        "type": "Container",
+        "z": "43ecb01d9ef6ca01",
+        "name": "FAN_Container",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "viewtype": "autre",
+        "viewunid1": "FAN",
+        "x": 420,
+        "y": 340,
+        "wires": [
+            [
+                "0ae040212fe590b5"
+            ]
+        ]
+    },
+    {
+        "id": "5d24ff4078bba7f3",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "3bfb233efc887709"
+            ]
+        ]
+    },
+    {
+        "id": "3bfb233efc887709",
+        "type": "Subscription",
+        "z": "43ecb01d9ef6ca01",
+        "name": "SUB_HEADCOUNT_SENSOR",
+        "platform": "ae1f9451e7ecdcc0",
+        "sensor": "b7d3c130e5b79fe5",
+        "container": "HEADCOUNT_SENSOR",
+        "path": "http://localhost:1880/NOTIFY_HEADCOUNT_SENSOR",
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "05df57f37664f394"
+            ]
+        ]
+    },
+    {
+        "id": "05df57f37664f394",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f16b376ba67a1c89",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "460c25c38ab1d6b8"
+            ]
+        ]
+    },
+    {
+        "id": "460c25c38ab1d6b8",
+        "type": "Subscription",
+        "z": "43ecb01d9ef6ca01",
+        "name": "SUB_TEMP_SENSOR",
+        "platform": "ae1f9451e7ecdcc0",
+        "sensor": "b7d3c130e5b79fe5",
+        "container": "TEMP_SENSOR",
+        "path": "http://localhost:1880/NOTIFY_TEMP_SENSOR",
+        "x": 440,
+        "y": 620,
+        "wires": [
+            [
+                "74084c8b71f7bfde"
+            ]
+        ]
+    },
+    {
+        "id": "74084c8b71f7bfde",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "cdd37a395d3e315a",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/NOTIFY_HEADCOUNT_SENSOR",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 760,
+        "wires": [
+            [
+                "67d20727cd6eb03a"
+            ]
+        ]
+    },
+    {
+        "id": "0f00fa17e53991fe",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/NOTIFY_USER_TARGET",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 700,
+        "wires": [
+            [
+                "67d20727cd6eb03a"
+            ]
+        ]
+    },
+    {
+        "id": "7d71403df38a7424",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/HEADCOUNT_SENSOR_DATA",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 1640,
+        "wires": [
+            [
+                "bc2a6afa0745adff",
+                "13358481e8a053d3"
+            ]
+        ]
+    },
+    {
+        "id": "bc2a6afa0745adff",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;headcount&quot; val=&quot;'+ msg.payload.headcount + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1640,
+        "wires": [
+            [
+                "d20543af7d030f3a"
+            ]
+        ]
+    },
+    {
+        "id": "d20543af7d030f3a",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to in-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/HEADCOUNT_SENSOR",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1640,
+        "wires": [
+            [
+                "e0a59d93fa173d09",
+                "c963e19ab78691db"
+            ]
+        ]
+    },
+    {
+        "id": "e0a59d93fa173d09",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "c963e19ab78691db",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "13358481e8a053d3",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "553464f0e6a33626",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/TEMP_SENSOR_DATA",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 1760,
+        "wires": [
+            [
+                "60203f4c6846ed1c",
+                "6d84eb3933ed017a"
+            ]
+        ]
+    },
+    {
+        "id": "60203f4c6846ed1c",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;curr_temp&quot; val=&quot;'+ msg.payload.curr_temp + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1760,
+        "wires": [
+            [
+                "7069b47c098129f7"
+            ]
+        ]
+    },
+    {
+        "id": "7069b47c098129f7",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to in-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/TEMP_SENSOR",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1760,
+        "wires": [
+            [
+                "2fedd9094d5b67fb",
+                "c480f8493dbfb4a2"
+            ]
+        ]
+    },
+    {
+        "id": "2fedd9094d5b67fb",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "c480f8493dbfb4a2",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "6d84eb3933ed017a",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "064e56f06a66b8a3",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "(EDITING)POST CAL AC DATA",
+        "url": "/HEADCOUNT_SENSOR_DATA",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 2050,
+        "y": 1540,
+        "wires": [
+            [
+                "40d8240624311408",
+                "13296d0949c12aa7"
+            ]
+        ]
+    },
+    {
+        "id": "40d8240624311408",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;power&quot; val=&quot;'+ msg.payload.power + '&quot;/&gt;\\\n\t\t&lt;str name=&quot;AC&quot; val=&quot;'+ msg.payload.temp + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2370,
+        "y": 1540,
+        "wires": [
+            [
+                "0805763c12998615"
+            ]
+        ]
+    },
+    {
+        "id": "0805763c12998615",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to in-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/AC",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2590,
+        "y": 1540,
+        "wires": [
+            [
+                "4619cbbfb8eef3c8",
+                "517394311a797b8d"
+            ]
+        ]
+    },
+    {
+        "id": "4619cbbfb8eef3c8",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2860,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "517394311a797b8d",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2850,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "13296d0949c12aa7",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2340,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "4416f5f96051d226",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/TEMP_SENSOR_DATA",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 2090,
+        "y": 1660,
+        "wires": [
+            [
+                "979339aae2c29368",
+                "fda7b36853e2e0bf"
+            ]
+        ]
+    },
+    {
+        "id": "979339aae2c29368",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;power&quot; val=&quot;'+ msg.payload.power + '&quot;/&gt;\\\n\t\t&lt;str name=&quot;speed&quot; val=&quot;'+ msg.payload.speed + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2370,
+        "y": 1660,
+        "wires": [
+            [
+                "69fe5a6e5ecc20dd"
+            ]
+        ]
+    },
+    {
+        "id": "69fe5a6e5ecc20dd",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to in-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/FAN",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2590,
+        "y": 1660,
+        "wires": [
+            [
+                "93350f0d788a2c7a",
+                "2388b3593431e532"
+            ]
+        ]
+    },
+    {
+        "id": "93350f0d788a2c7a",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2860,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "2388b3593431e532",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2850,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "fda7b36853e2e0bf",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2340,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "45d72d4c8f614046",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/GET_FAN_DATA",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 2080,
+        "wires": [
+            [
+                "5d3028a3a463cc7f"
+            ]
+        ]
+    },
+    {
+        "id": "5d3028a3a463cc7f",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get from in-cse",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/FAN/la",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 480,
+        "y": 2080,
+        "wires": [
+            [
+                "ef3b10180d63829d"
+            ]
+        ]
+    },
+    {
+        "id": "ef3b10180d63829d",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 650,
+        "y": 2080,
+        "wires": [
+            [
+                "fae87cafb7e0fb03"
+            ]
+        ]
+    },
+    {
+        "id": "fae87cafb7e0fb03",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "parse contentInstant content",
+        "func": "msg.payload = msg.payload[\"m2m:cin\"].con[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 2080,
+        "wires": [
+            [
+                "80807b803bfd2ed0"
+            ]
+        ]
+    },
+    {
+        "id": "80807b803bfd2ed0",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1070,
+        "y": 2080,
+        "wires": [
+            [
+                "3e46b4ab87995548"
+            ]
+        ]
+    },
+    {
+        "id": "3e46b4ab87995548",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "outp format",
+        "func": "msg.payload = \"{power:\" + msg.payload.obj.str[0].$.val + \",FAN:\" + msg.payload.obj.str[1].$.val+\"}\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 2080,
+        "wires": [
+            [
+                "11b0838b2df26e69"
+            ]
+        ]
+    },
+    {
+        "id": "11b0838b2df26e69",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1390,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "7b220973525e2666",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 2160,
+        "wires": [
+            [
+                "5d3028a3a463cc7f"
+            ]
+        ]
+    },
+    {
+        "id": "216f58ab7dd520f6",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 980,
+        "y": 560,
+        "wires": [
+            [
+                "a99afac9ae89a5fc"
+            ]
+        ]
+    },
+    {
+        "id": "a99afac9ae89a5fc",
+        "type": "Subscription",
+        "z": "43ecb01d9ef6ca01",
+        "name": "SUB_AC",
+        "platform": "9a7c10657c97d7de",
+        "sensor": "b7d3c130e5b79fe5",
+        "container": "HEADCOUNT_SENSOR",
+        "path": "http://localhost:1880/NOTIFY_AC",
+        "x": 1200,
+        "y": 560,
+        "wires": [
+            [
+                "dbfb8b5ddcc01da2"
+            ]
+        ]
+    },
+    {
+        "id": "dbfb8b5ddcc01da2",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "86a2b328010be8cb",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 980,
+        "y": 620,
+        "wires": [
+            [
+                "ec121beac5256438"
+            ]
+        ]
+    },
+    {
+        "id": "ec121beac5256438",
+        "type": "Subscription",
+        "z": "43ecb01d9ef6ca01",
+        "name": "SUB_FAN",
+        "platform": "9a7c10657c97d7de",
+        "sensor": "b7d3c130e5b79fe5",
+        "container": "TMEP_SENSOR",
+        "path": "http://localhost:1880/NOTIFY_FAN",
+        "x": 1210,
+        "y": 620,
+        "wires": [
+            [
+                "1f80cf8545145ba9"
+            ]
+        ]
+    },
+    {
+        "id": "1f80cf8545145ba9",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9043e2b6394eeb34",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "Notification Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 820,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9c2344dd9202436c",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 450,
+        "y": 1080,
+        "wires": [
+            [
+                "7fdc308488528a9c"
+            ]
+        ]
+    },
+    {
+        "id": "7fdc308488528a9c",
+        "type": "switch",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload[\"m2m:sgn\"].nev[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 1080,
+        "wires": [
+            [
+                "9043e2b6394eeb34"
+            ],
+            [
+                "a75c6a7bf78722a2"
+            ]
+        ]
+    },
+    {
+        "id": "250a3e8ff5ec3998",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/NOTIFY_AC",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1080,
+        "wires": [
+            [
+                "9c2344dd9202436c"
+            ]
+        ]
+    },
+    {
+        "id": "a75c6a7bf78722a2",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get status",
+        "func": "var data = msg.payload[\"m2m:sgn\"].nev[0].rep[0][\"m2m:cin\"][0].con[0];\nmsg.payload = data\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1100,
+        "wires": [
+            [
+                "d4af649a6108ca08"
+            ]
+        ]
+    },
+    {
+        "id": "d4af649a6108ca08",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 950,
+        "y": 1100,
+        "wires": [
+            [
+                "ee5f1919795027a5"
+            ]
+        ]
+    },
+    {
+        "id": "ee5f1919795027a5",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "setup object",
+        "func": "var New = { latitude: null, longitude: null };\nNew.latitude = msg.payload.obj.str[0].$.val;\nNew.longitude = msg.payload.obj.str[1].$.val;\nmsg.payload = New;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 1100,
+        "wires": [
+            [
+                "4eaa6ad1b8b1a974"
+            ]
+        ]
+    },
+    {
+        "id": "4eaa6ad1b8b1a974",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "4fa96bdc4a159ee1",
+        "type": "http response",
+        "z": "43ecb01d9ef6ca01",
+        "name": "Notification Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 800,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "bc53635290d83893",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 430,
+        "y": 1200,
+        "wires": [
+            [
+                "2e66c04c74ead080"
+            ]
+        ]
+    },
+    {
+        "id": "2e66c04c74ead080",
+        "type": "switch",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload[\"m2m:sgn\"].nev[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 590,
+        "y": 1200,
+        "wires": [
+            [
+                "4fa96bdc4a159ee1"
+            ],
+            [
+                "9a67f701e9855096"
+            ]
+        ]
+    },
+    {
+        "id": "2dec2fe846e6d12f",
+        "type": "http in",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "url": "/NOTIFY_FAN",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1200,
+        "wires": [
+            [
+                "bc53635290d83893"
+            ]
+        ]
+    },
+    {
+        "id": "9a67f701e9855096",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get status",
+        "func": "var data = msg.payload[\"m2m:sgn\"].nev[0].rep[0][\"m2m:cin\"][0].con[0];\nmsg.payload = data\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 1220,
+        "wires": [
+            [
+                "c30dffcfcceb8e11"
+            ]
+        ]
+    },
+    {
+        "id": "c30dffcfcceb8e11",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 930,
+        "y": 1220,
+        "wires": [
+            [
+                "5f8a5519c324f130"
+            ]
+        ]
+    },
+    {
+        "id": "5f8a5519c324f130",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "setup object",
+        "func": "var New = { latitude: null, longitude: null };\nNew.latitude = msg.payload.obj.str[0].$.val;\nNew.longitude = msg.payload.obj.str[1].$.val;\nmsg.payload = New;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 1220,
+        "wires": [
+            [
+                "ef8c0fad6cea026f"
+            ]
+        ]
+    },
+    {
+        "id": "ef8c0fad6cea026f",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "14d471157d4c0611",
+        "type": "ContentInstance",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "platform": "ae1f9451e7ecdcc0",
+        "name1": "b7d3c130e5b79fe5",
+        "container": "FAN",
+        "width": 0,
+        "options": [
+            {
+                "type": "str",
+                "label": "power",
+                "value": "OFF"
+            },
+            {
+                "type": "str",
+                "label": "FAN",
+                "value": "2"
+            }
+        ],
+        "x": 1040,
+        "y": 420,
+        "wires": [
+            [
+                "e0d0210d3153a441"
+            ]
+        ]
+    },
+    {
+        "id": "6192c1373f339066",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 820,
+        "y": 420,
+        "wires": [
+            [
+                "14d471157d4c0611"
+            ]
+        ]
+    },
+    {
+        "id": "e0d0210d3153a441",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7d770f10b75b6cfa",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get from in-cse",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/USER_TARGET/la",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 640,
+        "y": 700,
+        "wires": [
+            [
+                "a480442d4b2cc73d"
+            ]
+        ]
+    },
+    {
+        "id": "a480442d4b2cc73d",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 810,
+        "y": 700,
+        "wires": [
+            [
+                "cf470f18913e4dd0"
+            ]
+        ]
+    },
+    {
+        "id": "cf470f18913e4dd0",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "parse contentInstant content",
+        "func": "msg.payload = msg.payload[\"m2m:cin\"].con[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 700,
+        "wires": [
+            [
+                "a37a7cec0f7c3b40"
+            ]
+        ]
+    },
+    {
+        "id": "a37a7cec0f7c3b40",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1230,
+        "y": 700,
+        "wires": [
+            [
+                "894050f013048c6f"
+            ]
+        ]
+    },
+    {
+        "id": "894050f013048c6f",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "outp format",
+        "func": "//msg.payload = \"{target_temp:\" + msg.payload.obj.str[0].$.val + \",mode:\" + msg.payload.obj.str[1].$.val+\"}\";\nmsg.topic = \"target_mode\"\n\nlet tmpVal = Number(msg.payload.obj.str[0].$.val);\nlet modeVal = msg.payload.obj.str[1].$.val\n\nmsg.payload={\n    target_temp:tmpVal,\n    mode:modeVal\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 700,
+        "wires": [
+            [
+                "493410829b7bd8cc"
+            ]
+        ]
+    },
+    {
+        "id": "044f2cd7c07895a5",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get from in-cse",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/TEMP_SENSOR/la",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 640,
+        "y": 820,
+        "wires": [
+            [
+                "0f20dc9e9ea78be3"
+            ]
+        ]
+    },
+    {
+        "id": "0f20dc9e9ea78be3",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 810,
+        "y": 820,
+        "wires": [
+            [
+                "a71c33c0d2930d94"
+            ]
+        ]
+    },
+    {
+        "id": "a71c33c0d2930d94",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "parse contentInstant content",
+        "func": "msg.payload = msg.payload[\"m2m:cin\"].con[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 820,
+        "wires": [
+            [
+                "672c4c3e9a5099b4"
+            ]
+        ]
+    },
+    {
+        "id": "672c4c3e9a5099b4",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1230,
+        "y": 820,
+        "wires": [
+            [
+                "e5453635eac7a1f1"
+            ]
+        ]
+    },
+    {
+        "id": "e5453635eac7a1f1",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "outp format",
+        "func": "// msg.payload = \"{curr_temp:\" + msg.payload.obj.str[0].$.val+\"}\";\nmsg.topic = \"curr_temp\";\nlet currVal = Number(msg.payload.obj.str[0].$.val);\nmsg.payload = {\n    curr_temp:currVal\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 820,
+        "wires": [
+            [
+                "493410829b7bd8cc"
+            ]
+        ]
+    },
+    {
+        "id": "f116eb49d03a1965",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "get from in-cse",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/HEADCOUNT_SENSOR/la",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 640,
+        "y": 760,
+        "wires": [
+            [
+                "98de722ea0756ebe"
+            ]
+        ]
+    },
+    {
+        "id": "98de722ea0756ebe",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 810,
+        "y": 760,
+        "wires": [
+            [
+                "98e0fa328eadc3c3"
+            ]
+        ]
+    },
+    {
+        "id": "98e0fa328eadc3c3",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "parse contentInstant content",
+        "func": "msg.payload = msg.payload[\"m2m:cin\"].con[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 760,
+        "wires": [
+            [
+                "6451cc73a8c5b486"
+            ]
+        ]
+    },
+    {
+        "id": "6451cc73a8c5b486",
+        "type": "xml",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1230,
+        "y": 760,
+        "wires": [
+            [
+                "bdd39c6a76ea55d8"
+            ]
+        ]
+    },
+    {
+        "id": "bdd39c6a76ea55d8",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "outp format",
+        "func": "//msg.payload = \"{headcount:\" + msg.payload.obj.str[0].$.val +\"}\";\nmsg.topic = \"headcount\"\n\nlet headVal = Number(msg.payload.obj.str[0].$.val);\nmsg.payload = {\n    headcount:headVal\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 760,
+        "wires": [
+            [
+                "493410829b7bd8cc"
+            ]
+        ]
+    },
+    {
+        "id": "493410829b7bd8cc",
+        "type": "join",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1590,
+        "y": 760,
+        "wires": [
+            [
+                "42de032f7dd4dd3b",
+                "044a269ecaeaeb60"
+            ]
+        ]
+    },
+    {
+        "id": "42de032f7dd4dd3b",
+        "type": "debug",
+        "z": "43ecb01d9ef6ca01",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "67d20727cd6eb03a",
+        "type": "switch",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 760,
+        "wires": [
+            [
+                "7d770f10b75b6cfa",
+                "f116eb49d03a1965",
+                "044f2cd7c07895a5"
+            ]
+        ]
+    },
+    {
+        "id": "044a269ecaeaeb60",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "rule logic",
+        "func": "let data = msg.payload;\n\nlet headcount = data.headcount.headcount;\nlet currTemp = data.curr_temp.curr_temp;\nlet targetTemp = data .target_mode.target_temp;\nlet modeVal = data.target_mode.mode;\n\nlet AC_power = (headcount > 0) ? \"ON\" : \"OFF\";\nlet FAN_power = (headcount > 0) ? \"ON\" : \"OFF\";\n\nlet delta = Math.abs(targetTemp-currTemp);\nlet FAN;\nif (modeVal == \"SILENT\"){\n    FAN = 1;\n}\nelse{\n    if (delta >= 3) {\n        FAN = 3;\n    }\n    else if (delta >= 2) {\n        FAN = 2;\n    }\n    else {\n        FAN = 1;\n    }\n}\n\nmsg.payload = {\n    AC:{power:AC_power,temp:targetTemp},\n    FAN:{power:FAN_power,speed:FAN}\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 760,
+        "wires": [
+            [
+                "63b47b6e5605aaa3",
+                "62490d718ec3b916"
+            ]
+        ]
+    },
+    {
+        "id": "8226ed6e2682db9d",
+        "type": "inject",
+        "z": "43ecb01d9ef6ca01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 900,
+        "wires": [
+            [
+                "7d770f10b75b6cfa",
+                "f116eb49d03a1965",
+                "044f2cd7c07895a5"
+            ]
+        ]
+    },
+    {
+        "id": "63b47b6e5605aaa3",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;power&quot; val=&quot;'+ msg.payload.AC.power + '&quot;/&gt;\\\n\t\t&lt;str name=&quot;AC&quot; val=&quot;'+ msg.payload.AC.temp + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2010,
+        "y": 760,
+        "wires": [
+            [
+                "a571ab7c84a54821"
+            ]
+        ]
+    },
+    {
+        "id": "a571ab7c84a54821",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to in-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/AC",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2230,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62490d718ec3b916",
+        "type": "function",
+        "z": "43ecb01d9ef6ca01",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;power&quot; val=&quot;'+ msg.payload.FAN.power + '&quot;/&gt;\\\n\t\t&lt;str name=&quot;speed&quot; val=&quot;'+ msg.payload.FAN.speed + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2010,
+        "y": 880,
+        "wires": [
+            [
+                "5340ef5aa585c683"
+            ]
+        ]
+    },
+    {
+        "id": "5340ef5aa585c683",
+        "type": "http request",
+        "z": "43ecb01d9ef6ca01",
+        "name": "post to in-cse",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/SMART_ROOM/FAN",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2230,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae1f9451e7ecdcc0",
+        "type": "xN_CSE",
+        "platform": "in-cse",
+        "URLBase": "http://127.0.0.1:8080/~/in-cse/in-name",
+        "user": "admin",
+        "password": "admin"
+    },
+    {
+        "id": "b7d3c130e5b79fe5",
+        "type": "AE",
+        "appId": "SMART_ROOM"
+    },
+    {
+        "id": "9a7c10657c97d7de",
+        "type": "xN_CSE",
+        "platform": "mn-cse",
+        "URLBase": "http://127.0.0.1:8282/~/mn-cse/mn-name",
+        "user": "admin",
+        "password": "admin"
+    }
+]
