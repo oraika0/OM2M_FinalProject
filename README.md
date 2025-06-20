@@ -29,16 +29,16 @@ This project aims to solve this issue by:
 
 1. Start the OM2M in-cse server
 2. Import and deploy the Node-RED flow
-3. Create `smartRoom` AE and 5 
-![AE](./snapshots/AE.png)
+3. Create `smartRoom` AE and 5  
+![AE](./snapshots/AE.png)  
 ![container](./snapshots/container.png)
 
-4. Subscribe to updates from `user`, `headcountSensor`, and `thermometer`
-![subscription](./snapshots/subscription.png)
-5. Launch 5 simulated App Inventor devices (User Remote, Sensors, ACs, FANs)
-![AppInventor](./snapshots/AppInventor.png)
-6. Simulate data posting (HTTP POST to corresponding containers)
-![imagecotentInstance](./snapshots/contentInstance.png)
+4. Subscribe to updates from `user`, `headcountSensor`, and `thermometer`  
+![subscription](./snapshots/subscription.png)  
+5. Launch 5 simulated App Inventor devices (User Remote, Sensors, ACs, FANs)  
+![AppInventor](./snapshots/AppInventor.png)  
+6. Simulate data posting (HTTP POST to corresponding containers)  
+![imagecotentInstance](./snapshots/contentInstance.png)  
 
 7. Node-RED computes settings and posts to `AC` / `FAN`
 8. Each device polls its container (get la), retrieves the configuration, and deploys it
