@@ -12,7 +12,7 @@ This project aims to solve this issue by:
 - Allowing users to send high-level abstract requests (e.g., target temperature, silent mode) via one interface
 - Uploading requests and sensor data to the **OM2M in-cse**
 - Using **Node-RED** (as AE) to subscribe, aggregate, and compute optimal device settings
-- Devices **poll** OM2M to retrieve and apply the latest configuration
+- Devices **poll** OM2M to retrieve and apply the latest configuration (for non-om2m device)
 
 ---
 ## Components (Simulated via App Inventor)
